@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    char vibor;
+    do {
+        cout << "Введите 's' для шифрования, 'd' для дешифорвания: ";
+        cin >> vibor; 
+    } while (vibor != 's' && vibor != 'd' );
+    
+    int dlina;
+    cout << "Введите длину строки: ";
+    cin >> dlina;
+    
+    char rr[dlina+1];
+    cout << "Введите слово: ";
+    cin >> rr; 
+    
+    int sdvig;
+    cout << "Насколько будет сдвиг: ";
+    cin >> sdvig;
+    
+    for (int i = 0; i < dlina; i++){
+        char bb = (rr[i]) ? 'a' : 'A' ;
+        if (vibor == 's') {
+            rr[i] = ((rr[i] - bb + sdvig) % 26) + bb; 
+        }else{
+            rr[i] = ((rr[i] - bb - sdvig + 26) % 26) + bb;
+        }
+    }
+    if (vibor == 's'){
+        cout << "Шифровка: "<<rr<<endl;
+    }else{
+        cout<<"Расшифровка: "<<rr<<endl;
+    }
+    return 0;
+}
+
+
