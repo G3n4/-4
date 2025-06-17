@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main()
-{
+{https://github.com/vq1W24/Ya-vse-ebal-etogo-dema.git
     char vibor;
     do {
         cout << "Введите 's' для шифрования, 'd' для дешифорвания: ";
